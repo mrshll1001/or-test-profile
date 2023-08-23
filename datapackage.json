@@ -261,13 +261,6 @@
             "name": "service",
             "path": "services.csv",
             "description": "The details of the services provided by organizations to a range of different groups.",
-            "allOf": [
-                {
-                    "required": [
-                        "url"
-                    ]
-                }
-            ],
             "format": "csv",
             "mediatype": "text/csv",
             "profile": "tabular-data-resource",
@@ -414,6 +407,17 @@
                         "example": "If you are an NHS patient please ask your GP for a referral letter, we will then be in touch with you directly. If you are not an NHS patient you should ring our reception to arrange an appointment"
                     },
                     {
+                        "name": "fees_description",
+                        "type": "string",
+                        "title": "Fees Description",
+                        "description": "A free text description of any charges for service users to access this service.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "example": "Non-NHS patients are expected to pay for their counselling sessions. We charge a flat rate per hour of counselling. The current rate is \u00a350 per hour. Please see our website for up to date prices."
+                    },
+                    {
                         "name": "wait_time",
                         "type": "string",
                         "title": "Wait Time",
@@ -423,6 +427,17 @@
                             "unique": false
                         },
                         "example": "wait_time"
+                    },
+                    {
+                        "name": "fees",
+                        "type": "string",
+                        "title": "Fees",
+                        "description": "DEPRECATED: Details of any charges for service users to access this service.",
+                        "constraints": {
+                            "required": false,
+                            "unique": false
+                        },
+                        "example": "fees_description"
                     },
                     {
                         "name": "accreditations",
@@ -2268,6 +2283,120 @@
                             "resource": "taxonomy",
                             "fields": "id"
                         }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "metadata",
+            "path": "metadata.csv",
+            "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "profile": "tabular-data-resource",
+            "schema": {
+                "primaryKey": "id",
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "title": "Identifier",
+                        "description": "The identifier for this metadata. Each entry must have a unique identifier.",
+                        "format": "uuid",
+                        "constraints": {
+                            "required": true,
+                            "unique": true
+                        },
+                        "example": "6cd71e9f-1013-49d9-8370-26b8f59d3e5a"
+                    },
+                    {
+                        "name": "resource_id",
+                        "type": "string",
+                        "title": "Resource Identifier",
+                        "description": "The identifier of the resource (service, program, location, address, or contact) that this metadata describes.",
+                        "format": "uuid",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        },
+                        "example": "38960354-e7d2-4cfa-a368-820f729d6ccf"
+                    },
+                    {
+                        "name": "resource_type",
+                        "type": "string",
+                        "title": "Resource Type",
+                        "description": "The type of entity being referenced.",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        },
+                        "example": "location"
+                    },
+                    {
+                        "name": "last_action_date",
+                        "type": "date",
+                        "title": "Last Action Date",
+                        "description": "The date when data was changed.",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        },
+                        "example": "2011-01-01"
+                    },
+                    {
+                        "name": "last_action_type",
+                        "type": "string",
+                        "title": "Last Action Type",
+                        "description": "The kind of change made to the data.",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        },
+                        "example": "update"
+                    },
+                    {
+                        "name": "field_name",
+                        "type": "string",
+                        "title": "Field Name",
+                        "description": "The name of field that has been modified.",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        },
+                        "example": "name"
+                    },
+                    {
+                        "name": "previous_value",
+                        "type": "string",
+                        "title": "Previous Value",
+                        "description": "The previous value of the field that has been modified.",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        },
+                        "example": "MyCity Civic Center"
+                    },
+                    {
+                        "name": "replacement_value",
+                        "type": "string",
+                        "title": "Replacement Value",
+                        "description": "The new value of the field that has been modified.",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        },
+                        "example": "MyCity New Civic Center"
+                    },
+                    {
+                        "name": "updated_by",
+                        "type": "string",
+                        "title": "Updated By",
+                        "description": "The name of the person who modified the field.",
+                        "constraints": {
+                            "required": true,
+                            "unique": false
+                        },
+                        "example": "Ann Persona"
                     }
                 ]
             }

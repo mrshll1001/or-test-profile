@@ -138,6 +138,16 @@
       },
       "example": "If you are an NHS patient please ask your GP for a referral letter, we will then be in touch with you directly. If you are not an NHS patient you should ring our reception to arrange an appointment"
     },
+    "fees_description": {
+      "name": "fees_description",
+      "type": "string",
+      "title": "Fees Description",
+      "description": "A free text description of any charges for service users to access this service.",
+      "constraints": {
+        "unique": false
+      },
+      "example": "Non-NHS patients are expected to pay for their counselling sessions. We charge a flat rate per hour of counselling. The current rate is \u00a350 per hour. Please see our website for up to date prices."
+    },
     "wait_time": {
       "name": "wait_time",
       "type": "string",
@@ -147,6 +157,16 @@
         "unique": false
       },
       "example": "wait_time"
+    },
+    "fees": {
+      "name": "fees",
+      "type": "string",
+      "title": "Fees",
+      "description": "DEPRECATED: Details of any charges for service users to access this service.",
+      "constraints": {
+        "unique": false
+      },
+      "example": "fees_description"
     },
     "accreditations": {
       "name": "accreditations",
@@ -344,6 +364,15 @@
       "items": {
         "$ref": "#/definitions/attribute"
       }
+    },
+    "metadata": {
+      "name": "metadata",
+      "type": "array",
+      "title": "Metadata",
+      "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+      "items": {
+        "$ref": "#/definitions/metadata"
+      }
     }
   },
   "required": [
@@ -353,13 +382,6 @@
   ],
   "tabular_required": [
     "organization_id"
-  ],
-  "allOf": [
-    {
-      "required": [
-        "url"
-      ]
-    }
   ],
   "definitions": {
     "organization": {
@@ -577,6 +599,15 @@
           "items": {
             "$ref": "#/definitions/attribute"
           }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
+          }
         }
       },
       "required": [
@@ -656,6 +687,15 @@
           "description": "A link between a service and one or more classifications that describe the nature of the service provided.",
           "items": {
             "$ref": "#/definitions/attribute"
+          }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
           }
         }
       },
@@ -754,6 +794,15 @@
           "title": "Taxonomy Term",
           "description": "Each service can be categorized according to one or more taxonomy terms. The taxonomy_term object contains a list of taxonomy terms, their names, and, for hierarchical taxonomies, their structure.",
           "$ref": "#/definitions/taxonomy_term"
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
+          }
         }
       },
       "required": [
@@ -863,6 +912,15 @@
           "description": "A link between a service and one or more classifications that describe the nature of the service provided.",
           "items": {
             "$ref": "#/definitions/attribute"
+          }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
           }
         }
       },
@@ -1083,6 +1141,15 @@
           "items": {
             "$ref": "#/definitions/attribute"
           }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "The metadata table contains a record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
+          }
         }
       },
       "required": [
@@ -1228,6 +1295,15 @@
           "items": {
             "$ref": "#/definitions/attribute"
           }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
+          }
         }
       },
       "required": [
@@ -1363,6 +1439,15 @@
           "description": "A link between a service and one or more classifications that describe the nature of the service provided.",
           "items": {
             "$ref": "#/definitions/attribute"
+          }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
           }
         }
       },
@@ -1516,6 +1601,15 @@
           "description": "A link between a service and one or more classifications that describe the nature of the service provided.",
           "items": {
             "$ref": "#/definitions/attribute"
+          }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
           }
         }
       },
@@ -1816,6 +1910,15 @@
           "items": {
             "$ref": "#/definitions/attribute"
           }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
+          }
         }
       },
       "required": [
@@ -1885,6 +1988,21 @@
           "items": {
             "$ref": "#/definitions/attribute"
           }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
+          }
+        },
+        "test": {
+          "name": "test",
+          "title": "Test New Field",
+          "description": "A new field on the funding object",
+          "type": "string"
         }
       },
       "required": [
@@ -1987,6 +2105,15 @@
           "items": {
             "$ref": "#/definitions/attribute"
           }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
+          }
         }
       },
       "required": [
@@ -2055,6 +2182,15 @@
           "description": "A link between a service and one or more classifications that describe the nature of the service provided.",
           "items": {
             "$ref": "#/definitions/attribute"
+          }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
           }
         }
       },
@@ -2159,6 +2295,15 @@
           "items": {
             "$ref": "#/definitions/attribute"
           }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
+          }
         }
       },
       "required": [
@@ -2240,6 +2385,15 @@
           "description": "A link between a service and one or more classifications that describe the nature of the service provided.",
           "items": {
             "$ref": "#/definitions/attribute"
+          }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
           }
         }
       },
@@ -2362,12 +2516,141 @@
             "unique": false
           },
           "example": "http://example.com"
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
+          }
         }
       },
       "required": [
         "id",
         "name",
         "description"
+      ]
+    },
+    "metadata": {
+      "name": "metadata",
+      "path": "metadata.csv",
+      "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+      "datapackage_metadata": {
+        "format": "csv",
+        "mediatype": "text/csv",
+        "profile": "tabular-data-resource",
+        "order": 17
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "name": "id",
+          "type": "string",
+          "title": "Identifier",
+          "description": "The identifier for this metadata. Each entry must have a unique identifier.",
+          "format": "uuid",
+          "constraints": {
+            "unique": true
+          },
+          "example": "6cd71e9f-1013-49d9-8370-26b8f59d3e5a"
+        },
+        "resource_id": {
+          "name": "resource_id",
+          "type": "string",
+          "title": "Resource Identifier",
+          "description": "The identifier of the resource (service, program, location, address, or contact) that this metadata describes.",
+          "format": "uuid",
+          "constraints": {
+            "unique": false
+          },
+          "example": "38960354-e7d2-4cfa-a368-820f729d6ccf"
+        },
+        "resource_type": {
+          "name": "resource_type",
+          "type": "string",
+          "title": "Resource Type",
+          "description": "The type of entity being referenced.",
+          "constraints": {
+            "unique": false
+          },
+          "example": "location"
+        },
+        "last_action_date": {
+          "name": "last_action_date",
+          "type": "string",
+          "title": "Last Action Date",
+          "description": "The date when data was changed.",
+          "constraints": {
+            "unique": false
+          },
+          "example": "2011-01-01",
+          "datapackage_type": "date"
+        },
+        "last_action_type": {
+          "name": "last_action_type",
+          "type": "string",
+          "title": "Last Action Type",
+          "description": "The kind of change made to the data.",
+          "constraints": {
+            "unique": false
+          },
+          "example": "update"
+        },
+        "field_name": {
+          "name": "field_name",
+          "type": "string",
+          "title": "Field Name",
+          "description": "The name of field that has been modified.",
+          "constraints": {
+            "unique": false
+          },
+          "example": "name"
+        },
+        "previous_value": {
+          "name": "previous_value",
+          "type": "string",
+          "title": "Previous Value",
+          "description": "The previous value of the field that has been modified.",
+          "constraints": {
+            "unique": false
+          },
+          "example": "MyCity Civic Center"
+        },
+        "replacement_value": {
+          "name": "replacement_value",
+          "type": "string",
+          "title": "Replacement Value",
+          "description": "The new value of the field that has been modified.",
+          "constraints": {
+            "unique": false
+          },
+          "example": "MyCity New Civic Center"
+        },
+        "updated_by": {
+          "name": "updated_by",
+          "type": "string",
+          "title": "Updated By",
+          "description": "The name of the person who modified the field.",
+          "constraints": {
+            "unique": false
+          },
+          "example": "Ann Persona"
+        }
+      },
+      "required": [
+        "id",
+        "last_action_date",
+        "last_action_type",
+        "field_name",
+        "previous_value",
+        "replacement_value",
+        "updated_by"
+      ],
+      "tabular_required": [
+        "resource_id",
+        "resource_type"
       ]
     },
     "meta_table_description": {
@@ -2430,6 +2713,15 @@
           "description": "A link between a service and one or more classifications that describe the nature of the service provided.",
           "items": {
             "$ref": "#/definitions/attribute"
+          }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
           }
         }
       },
@@ -2541,6 +2833,15 @@
           "items": {
             "$ref": "#/definitions/attribute"
           }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
+          }
         }
       },
       "required": [
@@ -2622,6 +2923,15 @@
           "items": {
             "$ref": "#/definitions/attribute"
           }
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
+          }
         }
       },
       "required": [
@@ -2696,6 +3006,15 @@
             "unique": false
           },
           "example": "version"
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "array",
+          "title": "Metadata",
+          "description": "A record of the changes that have been made to the data in order to maintain provenance information.",
+          "items": {
+            "$ref": "#/definitions/metadata"
+          }
         }
       },
       "required": [

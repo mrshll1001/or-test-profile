@@ -1,0 +1,10 @@
+{
+  "properties": {
+    "test": {
+      "name": "test",
+      "title": "Test New Field",
+      "description": "A new field on the funding object",
+      "type": "string"
+    }
+  }
+}

@@ -8,7 +8,9 @@
   "status": "active",
   "interpretation_services": "Interpretation services are available in Urdu, Polish, and Slovak",
   "application_process": "If you are an NHS patient please ask your GP for a referral letter, we will then be in touch with you directly. If you are not an NHS patient you should ring our reception to arrange an appointment",
+  "fees_description": "Non-NHS patients are expected to pay for their counselling sessions. We charge a flat rate per hour of counselling. The current rate is \u00a350 per hour. Please see our website for up to date prices.",
   "wait_time": "wait_time",
+  "fees": "fees_description",
   "accreditations": "All of our practitioners are accredited by the BASC, UKCP, and the Professional Standards Body",
   "eligibility_description": "This service is intended for all people aged 12 and over who require counselling services in the MyCity area",
   "minimum_age": 12,
@@ -530,6 +532,18 @@
         "language": "eng",
         "term_uri": "http://example.com"
       }
+    }
+  ],
+  "metadata": [
+    {
+      "id": "6cd71e9f-1013-49d9-8370-26b8f59d3e5a",
+      "resource_type": "location",
+      "last_action_date": "2011-01-01",
+      "last_action_type": "update",
+      "field_name": "name",
+      "previous_value": "MyCity Civic Center",
+      "replacement_value": "MyCity New Civic Center",
+      "updated_by": "Ann Persona"
     }
   ]
 }

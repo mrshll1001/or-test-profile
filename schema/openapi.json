@@ -1,12 +1,18 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "HSDS OpenAPI Demo Profile",
-    "version": "3.0",
-    "description": "Demo Profile",
+    "title": "REQUIRED -- TITLE OF YOUR API HERE",
+    "version": "REQUIRED -- The version of this document. This is distinct from the OpenAPI Schema version and the version of your API.",
+    "summary": "SUMMARY HERE",
+    "description": "DESCRIPTION HERE",
+    "contact": {
+      "name": "YOUR CONTACT NAME HERE",
+      "url": "YOUR CONTACT URL HERE",
+      "email": "YOUR CONTACT EMAIL HERE"
+    },
     "license": {
-      "name": "Creative Commons Attribution Share-Alike 4.0 license",
-      "url": "https://creativecommons.org/licenses/by/4.0/"
+      "name": "REQUIRED -- THE LICENSE OF YOUR API",
+      "url": "Url to the license used; mutually exclusive to the identifier field if used."
     }
   },
   "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
@@ -68,7 +74,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/compiled/service.json"
+                  "$ref": "https://raw.githubusercontent.com/mrshll1001/or-test-profile/main/schema/compiled/service.json"
                 }
               }
             }
@@ -125,7 +131,7 @@
                     "contents": {
                       "type": "array",
                       "items": {
-                        "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/compiled/service_list.json"
+                        "$ref": "https://raw.githubusercontent.com/mrshll1001/or-test-profile/main/schema/compiled/service_list.json"
                       }
                     }
                   },
@@ -163,7 +169,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/taxonomy.json"
+                  "$ref": "https://raw.githubusercontent.com/mrshll1001/or-test-profile/main/schema/taxonomy.json"
                 }
               }
             }
@@ -200,7 +206,7 @@
                     "contents": {
                       "type": "array",
                       "items": {
-                        "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/taxonomy.json"
+                        "$ref": "https://raw.githubusercontent.com/mrshll1001/or-test-profile/main/schema/taxonomy.json"
                       }
                     }
                   },
@@ -238,7 +244,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/taxonomy_term.json"
+                  "$ref": "https://raw.githubusercontent.com/mrshll1001/or-test-profile/main/schema/taxonomy_term.json"
                 }
               }
             }
@@ -296,7 +302,7 @@
                     "contents": {
                       "type": "array",
                       "items": {
-                        "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/taxonomy_term.json"
+                        "$ref": "https://raw.githubusercontent.com/mrshll1001/or-test-profile/main/schema/taxonomy_term.json"
                       }
                     }
                   },
@@ -339,7 +345,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/compiled/organization.json"
+                  "$ref": "https://raw.githubusercontent.com/mrshll1001/or-test-profile/main/schema/compiled/organization.json"
                 }
               }
             }
@@ -383,7 +389,7 @@
                     "contents": {
                       "type": "array",
                       "items": {
-                        "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/compiled/organization_list.json"
+                        "$ref": "https://raw.githubusercontent.com/mrshll1001/or-test-profile/main/schema/compiled/organization_list.json"
                       }
                     }
                   },
@@ -421,7 +427,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/compiled/service.json"
+                  "$ref": "https://raw.githubusercontent.com/mrshll1001/or-test-profile/main/schema/compiled/service.json"
                 }
               }
             }
@@ -480,7 +486,7 @@
                     "contents": {
                       "type": "array",
                       "items": {
-                        "$ref": "https://raw.githubusercontent.com/openreferral/hsds_example_profile/main/schema/compiled/service_at_location_list.json"
+                        "$ref": "https://raw.githubusercontent.com/mrshll1001/or-test-profile/main/schema/compiled/service_at_location_list.json"
                       }
                     }
                   },
